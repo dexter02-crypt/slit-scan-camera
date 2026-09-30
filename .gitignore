@@ -1,0 +1,8 @@
+.venv/
+.runtime.json
+__pycache__/
+*.pyc
+outputs/
+inputs/
+.DS_Store
+.env

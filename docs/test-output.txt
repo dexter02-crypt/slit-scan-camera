@@ -1,0 +1,25 @@
+Saved locally: /tmp/tmpptfqx31d/capture-20260930-123326-d042bb778b.png
+Saved locally: /tmp/tmpptfqx31d/capture-20260930-123326-65ed419fbc.png
+Local camera only. No recording/upload. S saves one image only with --allow-snapshots.
+test_explicit_save_new_unique_files (test_common.CommonTests.test_explicit_save_new_unique_files) ... ok
+test_failed_camera_released (test_common.CommonTests.test_failed_camera_released) ... ok
+test_invalid_frame (test_common.CommonTests.test_invalid_frame) ... ok
+test_no_network_camera (test_common.CommonTests.test_no_network_camera) ... ok
+test_panel_input_unchanged (test_common.CommonTests.test_panel_input_unchanged) ... ok
+test_processing_failure_releases_camera (test_common.CommonTests.test_processing_failure_releases_camera) ... ok
+test_symlink_save_refused (test_common.CommonTests.test_symlink_save_refused) ... ok
+test_bad_speed (test_slit.SlitTests.test_bad_speed) ... ok
+test_finished_stays (test_slit.SlitTests.test_finished_stays) ... ok
+test_gap_bounded (test_slit.SlitTests.test_gap_bounded) ... ok
+test_horizontal (test_slit.SlitTests.test_horizontal) ... ok
+test_no_input_changes (test_slit.SlitTests.test_no_input_changes) ... ok
+test_pause (test_slit.SlitTests.test_pause) ... ok
+test_reset (test_slit.SlitTests.test_reset) ... ok
+test_shape_change (test_slit.SlitTests.test_shape_change) ... ok
+test_temporal_strips_native (test_slit.SlitTests.test_temporal_strips_native) ... ok
+test_time_reversal (test_slit.SlitTests.test_time_reversal) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.063s
+
+OK
