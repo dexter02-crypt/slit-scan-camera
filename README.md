@@ -18,9 +18,6 @@ python3.12 -m venv .venv
 .venv/bin/python app.py camera
 ```
 
-The enclosing FX kit can instead reuse the existing barcode environment without
-installing or changing any packages. See the kit README.
-
 ## Controls
 
 R restarts. V sweeps vertically; H sweeps horizontally. Space pauses. Move while the line advances. Q or Esc exits. Close one camera application before opening another.
@@ -36,9 +33,14 @@ sequence rendered by the application, not a measured camera performance result.
 
 Time composites are visual effects, not evidence of physical shape or object identity.
 
-Actual image processing and deterministic tests were exercised on Linux. Physical
-Mac camera behavior, camera permissions and window interaction remain to be checked
-locally. See [validation](docs/VALIDATION.md) and [design](docs/DESIGN.md).
+Actual image processing and deterministic tests were exercised locally and in hosted CI.
+
+On the maintainer Apple-Silicon Mac, Python 3.12.14 with OpenCV 4.13.0 and NumPy
+2.3.5 passed the full test suite. A separate bounded camera-access smoke check read
+60 consecutive frames from local camera index 0. That establishes camera acquisition,
+not validation of the GUI controls or visual-effect quality.
+
+See [validation](docs/VALIDATION.md) and [design](docs/DESIGN.md).
 
 ## License
 

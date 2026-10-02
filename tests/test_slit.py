@@ -1,9 +1,12 @@
 import unittest
 import numpy as np
 from core import SlitScan
+import app
 from app import check
 
 class SlitTests(unittest.TestCase):
+    def test_release_version(self):
+        self.assertEqual(app.__version__, "0.1.0")
     def f(self,v=30):return np.full((20,40,3),v,np.uint8)
     def test_temporal_strips_native(self):check()
     def test_no_input_changes(self):
