@@ -1,17 +1,42 @@
 name: Native fixture tests
-on: [push, pull_request]
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
 permissions:
   contents: read
+
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ["3.12"]
+
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
-      - run: |
+          python-version: ${{ matrix.python }}
+
+      - name: Install pinned dependencies
+        run: |
           python -m pip install --only-binary=:all: -r requirements.txt
-      - run: python -m unittest discover -s tests -v
-      - run: python app.py check
-# Synthetic native checks only. No physical camera or GUI is tested by this workflow.
+
+      - name: Run tests
+        run: |
+          python -B -m unittest discover -s tests -v
+
+      - name: Native synthetic check
+        run: |
+          python app.py check

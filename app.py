@@ -1,5 +1,7 @@
 """Local camera time-warp experiment."""
 import sys
+
+__version__ = "0.1.0"
 from common import cli,demo_frame
 from core import SlitScan
 
